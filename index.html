@@ -1,0 +1,119 @@
+<!-- 
+こんにちは、コードを見てくれてありがとうございます。
+解析等は自由にしていいので一つお願いがあります
+貴方のような技術者を私は探しています
+もし貴方がこのコードを見ているならば私のサーバーにご参加ください
+プログラミング技術の向上や情報交換を目的としています
+荒らし関係者の方でも構いません
+
+# 🌐 |- how to program🤔
+https://discord.gg/tfyqW3CNZh
+
+参加をお待ちしております！
+-->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="disport-title">
+      <h1>disport</h1>
+      <h2>auto report tool</h2>
+    </div>
+    <div class="disport-form">
+      <h2>説明</h2>
+      <p>
+        各TOKENにつき一つのリクエストを送信します<br />同じTOKENでの複数のリクエストは無意味です<br />リクエストの送信間隔は1秒です<br />ツールの利用は自己責任でお願いします
+      </p>
+      <h2>input TOKEN</h2>
+      <textarea id="token" placeholder="TOKEN改行で区切ってください"></textarea>
+      <h2>channnel id</h2>
+      <p>通報するメッセージがあるチャンネルのID</p>
+      <input type="text" id="channelId" placeholder="channelID" />
+      <h2>message id</h2>
+      <p>通報するメッセージのID</p>
+      <input type="text" id="messageId" placeholder="messageID" />
+      <div id="disport-type">
+        <br />
+        <h2>report type</h2>
+        <br />
+        <h2>スパム</h2>
+        <p>スパム <input type="radio" name="type" id="type0" /></p>
+        <h2>攻撃またはハラスメント</h2>
+        <p>
+          私または他人に対する言葉での嫌がらせ<input
+            type="radio"
+            name="type"
+            id="type1"
+          />
+        </p>
+        <p>
+          無礼、卑猥、または攻撃的な言葉遣い<input
+            type="radio"
+            name="type"
+            id="type2"
+          />
+        </p>
+        <h2>有害な誤情報または暴力の是認</h2>
+        <p>
+          自分または知人について悪口を言っている<input
+            type="radio"
+            name="type"
+            id="type3"
+          />
+        </p>
+        <h2>個人を特定できる情報を晒している</h2>
+        <p>
+          個人を特定できる情報を晒している
+          <input type="radio" name="type" id="type4" />
+        </p>
+        <div class="type4" style="display: none">
+        <p>住所または職番の住所<input type="checkbox" id="type4-1" /></p>
+        <p>電話番号<input type="checkbox" id="type4-2" /></p>
+        <p>クレジットカード情報<input type="checkbox" id="type4-3" /></p>
+        <p>メールアドレス<input type="checkbox" id="type4-4" /></p>
+        <p>実名<input type="checkbox" id="type4-5" /></p>
+        <p>IPアドレス<input type="checkbox" id="type4-6" /></p>
+        <p>顔写真<input type="checkbox" id="type4-7" /></p>
+        <p>プライベート性の高い写真<input type="checkbox" id="type4-8" /></p>
+      </div>
+      <script>
+        addEventListener("change", () => {
+          if (document.getElementById("type4").checked) {
+            document.querySelector(".type4").style.display = "block";
+          } else {
+            document.querySelector(".type4").style.display = "none";
+          }
+        });
+      </script>
+    </div>
+    <button onclick="start()">開始</button>
+    <div class="disport-log">
+      <h2>status</h2>
+      <input type="text" readonly id="status" />
+      <h2>reportID</h2>
+      <ul id="reportID"></ul>
+      <h2>error log</h2>
+      <ul id="errorLog"></ul>
+      <button onclick="reset()">ログのリセット</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
+<!--
+こんにちは、コードを見てくれてありがとうございます。
+解析等は自由にしていいので一つお願いがあります
+貴方のような技術者を私は探しています
+もし貴方がこのコードを見ているならば私のサーバーにご参加ください
+プログラミング技術の向上や情報交換を目的としています
+荒らし関係者の方でも構いません
+
+# 🌐 |- how to program🤔
+https://discord.gg/tfyqW3CNZh
+
+参加をお待ちしております！
+-->

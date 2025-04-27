@@ -26,7 +26,7 @@
       width: 100%;
       background: linear-gradient(135deg, #2196F3, #21CBF3);
       color: #fff;
-      padding: 5px 5px;
+      padding: 30px 20px;
       text-align: center;
       border-radius: 8px;
       margin-bottom: 30px;
@@ -80,7 +80,7 @@
       margin-bottom: 15px;
     }
     .accordion.nested {
-      margin: 10px 0 0 0;
+      margin: 10px 0 0 15px;
       border-color: #bbb;
     }
     .accordion-header {
@@ -107,117 +107,9 @@
     .accordion-content.open { padding: 15px 20px; overflow-y: auto; }
     .accordion-content label { display: block; margin-bottom: 10px; font-weight: 400; cursor: pointer; }
     .accordion-content label input { margin-right: 5px; }
-    
-
     /* Fieldset */
-    fieldset { 
-      border: none; 
-      margin: 0; 
-      padding: 0; 
-    }
-    fieldset legend { 
-      font-size: 1rem; 
-      margin-bottom: 10px; 
-      font-weight: 500; 
-    }
-
-    /* Fieldset のラベルに枠線・背景色・ホバーを追加 */
-    .card fieldset > label {
-      display: block;                     /* ラベルをブロック要素に */
-      border: 1px solid #ccc;             /* 薄いグレーの枠線 */
-      border-radius: 5px;                 /* 角を丸く */
-      background-color: #f9f9f9;          /* 薄いグレー背景 */
-      padding: 15px 20px;                 /* 十分な内側余白 */
-      margin-bottom: 8px;                /* ラベル間のすき間 */
-      transition: background-color 0.3s, border-color 0.3s;
-      cursor: pointer;                    /* ホバー時にポインタ */
-    }
-
-    .card fieldset > label:hover {
-      background-color: #e3f2fd;          /* ホバー時に淡い青背景 */
-      border-color: #2196F3;              /* ホバー時に青い枠線 */
-    }
-
-
-    /* アコーディオン内ラベルにも枠線・背景色・ホバーを追加 */
-    .accordion-content > label {
-      display: block;                     /* ブロック要素にしてクリック領域を広げる */
-      border: 1px solid #ccc;             /* 薄いグレーの枠線 */
-      border-radius: 5px;                 /* 角を丸く */
-      background-color: #f9f9f9;          /* フィールドセットと同じ背景色 */
-      padding: 15px 20px;                 /* 内側余白 */
-      margin-bottom: 8px;                 /* ラベル間のすき間 */
-      transition: background-color 0.3s, border-color 0.3s;
-      cursor: pointer;
-    }
-
-    /* ホバー時 */
-    .accordion-content > label:hover {
-      background-color: #e3f2fd;          /* 淡い青 */
-      border-color: #2196F3;              /* 青い枠線 */
-    }
-
-
-    /* チェック時（選択中）の強調例） */
-    .accordion-content > label input:checked + span,
-    .accordion-content > label input:checked {
-      background-color: #bbdefb;
-    }
-
-
-
-/* ──────────────────────────────────── */
-/* すべての選択肢ラベルを通常の文字の太さ（font-weight:400）に戻す */
-/* ─────────────── アコーディオン全体の文字を通常に ─────────────── */
-
-/* 1. ヘッダーのタイトル（h3）を通常の太さ・色に */
-.accordion-header h3 {
-  font-weight: 400 !important;
-  color: inherit   !important;
-}
-
-/* 2. アコーディオン内ラベルも通常の太さに */
-.accordion-content > label {
-  font-weight: 400 !important;
-  color: inherit   !important;
-}
-
-/* 3. もし選択時に span やラベル自体に色／太字や背景色が当たっていたら消す */
-.accordion-content > label input:checked + span,
-.accordion-content > label input:checked {
-  font-weight: inherit       !important;
-  color: inherit             !important;
-  background-color: transparent !important;
-}
-
-
-/* 1. アコーディオン見出し（h3）と各種選択肢ラベルを通常の font-weight・色に */
-.accordion-header h3,
-.accordion-content > label,
-.card fieldset > label {
-  font-weight: 400 !important;
-  color: inherit   !important;
-}
-
-/* 2. もしチェック時にだけ強調（背景や太字・色）が付くルールが残っていても、丸ごと打ち消す */
-label input:checked + span,
-label input:checked {
-  background-color: transparent !important;
-  font-weight:       inherit     !important;
-  color:             inherit     !important;
-}
-
-
-/* ──────────────────────────────────── */
-
-
-
-
-
-
-
-
-
+    fieldset { border: none; margin: 0; padding: 0; }
+    fieldset legend { font-size: 1rem; margin-bottom: 10px; font-weight: 500; }
     /* ログ表示エリア */
     .log {
       background: #fff;
@@ -252,8 +144,8 @@ label input:checked {
 <body>
   <!-- ヘッダー -->
   <header class="header">
-    <h1>Discord通報ツール</h1>
-    <h2>作者：つっくん</h2>
+    <h1>disport</h1>
+    <h2>Auto Report Tool</h2>
   </header>
 
   <!-- 入力フォームカード -->
